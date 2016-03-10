@@ -69,7 +69,8 @@ class Keystone(object):
             self.get_token()
 
         if self._keystone_client:
-            return self._keystone_client.monasca_url
+            # get 'monasca_url' from config file, if explicitly defined
+            return self.config.get('monasca_url', self._keystone_client.monasca_url)
         else:
             return None
 

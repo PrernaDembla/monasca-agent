@@ -16,6 +16,8 @@ Api:
   # Keystone API URL: URL for the Keystone server to use
   # Example: https://region-a.geo-1.identity.hpcloudsvc.com:35357/v3/
   keystone_url: {args.keystone_url}
+  # Monasca API URL (explicit value, no matter what is included in Keystone service catalog)
+  monasca_url: {args.monasca_url}
   # Domain id to be used to resolve username
   user_domain_id: {args.user_domain_id}
   # Domain name to be used to resolve username
